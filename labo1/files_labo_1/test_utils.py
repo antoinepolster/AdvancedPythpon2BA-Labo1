@@ -7,15 +7,15 @@ import utils
 
 class TestUtils(unittest.TestCase):
     def test_fact(self):
-        # À compléter...
+        utils.fact(5) ==120
         pass
     
     def test_roots(self):
-        # À compléter...
+        utils.roots(1,2,1)==-1
         pass
     
     def test_integrate(self):
-        # À compléter...
+        utils.integrate('x ** 2 - 1', -1, 1) == 2/3
         pass
 
 if __name__ == '__main__':
