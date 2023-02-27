@@ -50,7 +50,7 @@ def integrate(function, lower, upper):
 		you'll probably need the 'eval' function to evaluate the function
 		to integrate given as a string.
 	"""
-	#return integrate.quad(lambda x: eval(function, {"x": x}), lower, upper)[0]
+	return integrate.quad(lambda x: eval(function, {"x": x}), lower, upper)[0]
 
 if __name__ == '__main__':
 	print(fact(4))
