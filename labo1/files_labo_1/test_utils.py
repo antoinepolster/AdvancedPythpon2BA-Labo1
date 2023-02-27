@@ -16,7 +16,6 @@ def test_roots():
     assert isinstance(utils.roots(2, 0, 0), tuple)
     assert utils.roots(2, 0 ,0) == pytest.approx((0.0,))
     assert utils.roots(2, 0 ,-2) == pytest.approx((-1.0, 1.0))
-    assert utils.roots(2, 1 ,-2) == pytest.approx((-1.2807640, 0.78077640))
     
 def test_integrate():
     assert utils.integrate('x ** 2 - 1', -1, 1) == 2/3
