@@ -1,22 +1,25 @@
 # test_utils.py
 # Author: Sébastien Combéfis
 # Version: February 8, 2018
-
 import unittest
 import utils
+import pytest
+import math
 
-class TestUtils(unittest.TestCase):
-    def test_fact(self):
-        utils.fact(5) ==120
-        pass
+def test_fact():
+    assert utils.fact(0) == 1 
+    assert utils.fact(4) == 24
+    with pytest.raises(ValueError):
+        utils.fact(-1)
     
-    def test_roots(self):
-        utils.roots(1,2,1)==-1
-        pass
+def test_roots():
+    assert isinstance(utils.roots(2, 0, 0), tuple)
+    assert utils.roots(2, 0 ,0) == pytest.approx((0.0,))
+    assert utils.roots(2, 0 ,-2) == pytest.approx((-1.0, 1.0))
+    assert utils.roots(2, 1 ,-2) == pytest.approx((-1.2807640, 0.78077640))
     
-    def test_integrate(self):
-        utils.integrate('x ** 2 - 1', -1, 1) == 2/3
-        pass
+def test_integrate():
+    assert utils.integrate('x ** 2 - 1', -1, 1) == 2/3
 
 if __name__ == '__main__':
     suite = unittest.TestLoader().loadTestsFromTestCase(TestUtils)
