@@ -2,13 +2,13 @@
     "python.testing.unittestArgs": [
         "-v",
         "-s",
-        ".",
+        "./files_labo_1",
         "-p",
-        "test_*.py"
+        "*test*.py"
     ],
     "python.testing.pytestEnabled": true,
     "python.testing.unittestEnabled": false,
     "python.testing.pytestArgs": [
-        "."
+        "files_labo_1"
     ]
 }

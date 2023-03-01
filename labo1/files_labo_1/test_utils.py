@@ -18,7 +18,7 @@ def test_roots():
     assert utils.roots(2, 0 ,-2) == pytest.approx((-1.0, 1.0))
     
 def test_integrate():
-    assert utils.integrate('x ** 2 - 1', -1, 1) == 2/3
+    assert utils.integrale('x ** 2 - 1', -1, 1) == 2/3
 
 if __name__ == '__main__':
     suite = unittest.TestLoader().loadTestsFromTestCase(TestUtils)

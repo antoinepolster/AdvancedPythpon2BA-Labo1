@@ -6,6 +6,8 @@ from cmath import sqrt
 from math import factorial
 import math
 import scipy
+import scipy.integrate as integrale
+import scipy.special as special
 
 def fact(n):
 
@@ -50,8 +52,8 @@ def integrate(function, lower, upper):
 		you'll probably need the 'eval' function to evaluate the function
 		to integrate given as a string.
 	"""
-	return integrate.quad(lambda x: eval(function, {"x": x}), lower, upper)[0]
-
+	result = integrale.quad(lambda x: eval(function, {"x": x}), lower, upper)[0]
+	return result
 if __name__ == '__main__':
 	print(fact(4))
 	print(roots(1, 0, 1))
